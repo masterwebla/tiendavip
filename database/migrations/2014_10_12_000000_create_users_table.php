@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('direccion');
             $table->string('ciudad');
             $table->string('telefono');
-            $table->integer('idperfil')->unsigned();
+            $table->integer('idperfil')->unsigned()->default(2);
             $table->foreign('idperfil')
                   ->references('id')->on('perfiles');
             $table->rememberToken();

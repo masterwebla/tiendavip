@@ -8,6 +8,12 @@ use App\Perfil;
 
 class PerfilesController extends Controller
 {
+    //Función constructor para validar roles de usuario
+    public function __construct(){
+        $this->middleware('auth');
+        $this->middleware('admin');
+    }
+
     //Funcionar para listar registros
     public function index()
     {

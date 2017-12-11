@@ -17,3 +17,6 @@ Route::get('/nosotros','PaginasController@nosotros');
 //Rutas para la administración
 Route::resource('perfiles', 'Admin\PerfilesController');
 Route::resource('categorias', 'Admin\CategoriasController');
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
